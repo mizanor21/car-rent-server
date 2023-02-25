@@ -7,6 +7,13 @@ app.get('/', (req, res) => {
     res.send('Simple Node Server Running');
 })
 
+// DB_USER: carRent
+// DB_PASS: nuMSbh03vsiOvBBQ
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://carRent:nuMSbh03vsiOvBBQ@cluster0.disah5t.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
 app.use(cors());
 const users = [
     { id: 1, name: 'Shabana', email: 'shabana@gmail.com' },
